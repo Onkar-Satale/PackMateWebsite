@@ -1,45 +1,31 @@
-<div class="container d-flex justify-content-center align-items-center min-vh-100 login-page-wrap">
-
-  <!-- Notification -->
-  <div *ngIf="notificationMessage" class="toast show position-fixed top-0 end-0 m-3" role="alert" [ngClass]="{'bg-success': notificationType==='success', 'bg-danger': notificationType==='error'}">
-    <div class="toast-body text-white">
-      {{ notificationMessage }}
-    </div>
+<!-- Toast Notification: place this outside the container -->
+<div *ngIf="notificationMessage" 
+     class="toast show position-fixed top-0 end-0 m-3" 
+     role="alert"
+     [ngClass]="{'bg-success': notificationType==='success', 'bg-danger': notificationType==='error'}"
+     style="z-index: 1055;">
+  <div class="toast-body text-white">
+    {{ notificationMessage }}
   </div>
+</div>
 
+<!-- Login Form Container -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100 login-page-wrap">
   <div class="card shadow-sm p-4 p-md-5" style="max-width: 400px; width: 100%;">
     <h2 class="card-title text-center mb-4">Login to Your Account</h2>
     <form (submit)="handleLogin($event)" class="d-flex flex-column gap-3">
-
       <div class="form-group">
         <label for="email" class="form-label">Email</label>
-        <input 
-          type="email" 
-          id="email"
-          placeholder="Enter your email" 
-          class="form-control"
-          [(ngModel)]="email" 
-          name="email"
-          required
-        />
+        <input type="email" id="email" placeholder="Enter your email" 
+               class="form-control" [(ngModel)]="email" name="email" required />
       </div>
-
       <div class="form-group">
         <label for="password" class="form-label">Password</label>
-        <input 
-          type="password" 
-          id="password"
-          placeholder="Enter your password" 
-          class="form-control"
-          [(ngModel)]="password" 
-          name="password"
-          required
-        />
+        <input type="password" id="password" placeholder="Enter your password" 
+               class="form-control" [(ngModel)]="password" name="password" required />
       </div>
-
       <button type="submit" class="btn btn-primary btn-lg mt-3">Login</button>
     </form>
-
     <footer class="mt-4 text-center">
       <p class="mb-0 text-muted">Don't have an account? <a routerLink="/signup" class="text-primary">Sign Up</a></p>
     </footer>

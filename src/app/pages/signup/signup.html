@@ -1,14 +1,15 @@
-<div class="container d-flex justify-content-center align-items-center min-vh-100">
-
-  <!-- Notification -->
-  <div *ngIf="notificationMessage" class="toast show position-fixed top-0 end-0 m-3" 
-       [ngClass]="{'bg-success': notificationType==='success', 'bg-danger': notificationType==='error'}">
-    <div class="toast-body text-white">
-      {{ notificationMessage }}
-    </div>
+<!-- Toast Notification: place this outside your main container -->
+<div *ngIf="notificationMessage" 
+     class="toast show position-fixed top-0 end-0 m-3"
+     [ngClass]="{'bg-success': notificationType==='success', 'bg-danger': notificationType==='error'}"
+     style="z-index: 1055;">
+  <div class="toast-body text-white">
+    {{ notificationMessage }}
   </div>
+</div>
 
-  <!-- Signup Card -->
+<!-- Signup Container -->
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
   <div class="card shadow-sm p-4 p-md-5" style="max-width: 400px; width: 100%;">
     <h2 class="card-title text-center mb-4 text-primary">Create Your Account</h2>
 
