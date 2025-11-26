@@ -1,0 +1,112 @@
+<div class="container-fluid bg-light min-vh-100 d-flex align-items-center py-5">
+  <main class="container">
+    <!-- Section Heading -->
+    <section class="text-center mb-5">
+      <h4 class="fw-bold text-secondary mb-2">Get in Touch</h4>
+      <h2 class="fw-bold mb-3">We’re Here to Help</h2>
+      <p class="text-muted">
+        Reach out to us for any inquiries or support regarding your PackMate experience.
+      </p>
+    </section>
+
+    <!-- Contact Cards (Smaller Version) -->
+    <div class="row text-center g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-3 p-3">
+          <div class="display-6 text-success mb-2">📧</div>
+          <h5 class="fw-semibold mb-1">Email Us</h5>
+          <p class="text-muted mb-0" style="font-size: 0.9rem;">support@packmate.com</p>
+          <p class="text-muted" style="font-size: 0.85rem;">We aim to respond within 24 hours.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-3 p-3">
+          <div class="display-6 text-success mb-2">📞</div>
+          <h5 class="fw-semibold mb-1">Call Us</h5>
+          <p class="text-muted mb-0" style="font-size: 0.9rem;">+1-555-0125</p>
+          <p class="text-muted" style="font-size: 0.85rem;">Need immediate assistance? Our team is ready to help you.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 rounded-3 p-3">
+          <div class="display-6 text-success mb-2">📍</div>
+          <h5 class="fw-semibold mb-1">Visit Us</h5>
+          <p class="text-muted mb-0" style="font-size: 0.9rem;">123 Market St, Suite 456</p>
+          <p class="text-muted mb-0" style="font-size: 0.85rem;">San Francisco, CA</p>
+          <p class="text-muted" style="font-size: 0.85rem;">You can find us at 123 Market St.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form and Image -->
+    <div class="row align-items-center g-4">
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <form [formGroup]="contactForm" (ngSubmit)="handleSubmit()" class="needs-validation" novalidate>
+          <div class="row g-3 mb-3">
+            <div class="col">
+              <label for="firstName" class="form-label small">First Name</label>
+              <input type="text" id="firstName" formControlName="firstName" class="form-control form-control-sm"
+                placeholder="First Name" required />
+              <div class="invalid-feedback small">
+                Please provide your first name.
+              </div>
+            </div>
+            <div class="col">
+              <label for="lastName" class="form-label small">Last Name</label>
+              <input type="text" id="lastName" formControlName="lastName" class="form-control form-control-sm"
+                placeholder="Last Name" required />
+              <div class="invalid-feedback small">
+                Please provide your last name.
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mb-3">
+            <div class="col">
+              <label for="email" class="form-label small">Email Address</label>
+              <input type="email" id="email" formControlName="email" class="form-control form-control-sm"
+                placeholder="abc@xyz.com" required />
+              <div class="invalid-feedback small">
+                Please provide a valid email address.
+              </div>
+            </div>
+            <div class="col">
+              <label for="phone" class="form-label small">Phone Number</label>
+              <input type="text" id="phone" formControlName="phone" class="form-control form-control-sm"
+                placeholder="+91 1234567890" required />
+              <div class="invalid-feedback small">
+                Please provide your phone number.
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label small">Your Message</label>
+            <textarea id="message" formControlName="message" rows="5" class="form-control form-control-sm"
+              placeholder="Your Message" required></textarea>
+            <div class="invalid-feedback small">
+              Please enter your message.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100 btn-sm mb-3">Send Message</button>
+
+          <p class="text-center text-muted small" *ngIf="formStatus">{{ formStatus }}</p>
+        </form>
+      </div>
+
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+<img 
+  src="assets/mapdis.png" 
+  class="img-fluid"
+  style="max-width: 630px; border-radius: 14px;"
+  alt="Map">
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,36 @@
+/* ------------------------------------
+   HERO SECTION ANIMATION
+---------------------------------------*/
+
+/* Initial hidden state */
+.heroHidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-in-out;
+}
+
+/* Fade-in after heroVisible = true */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.btn-learn-more {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #007bff;
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  opacity: 1 !important; /* force visibility */
+}
+
+.btn-learn-more:hover {
+  background-color: #fff;
+  color: #007bff;
+  cursor: pointer;
+}

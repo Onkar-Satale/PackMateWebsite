@@ -1,0 +1,55 @@
+/* Smooth fade & slide animation */
+.animate-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modern image styling */
+.work-image {
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.work-image-sm {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* Typography */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+.details-p1, .details-p2, .details-p3 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.work-image {
+  width: 390px;          /* was ~480px earlier → made smaller */
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+

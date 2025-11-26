@@ -1,0 +1,78 @@
+<div class="how-it-works-container">
+
+  <!-- Intro Section -->
+  <section #introSection [ngClass]="{'animate': introVisible}" class="section intro-section">
+    <div class="content-wrapper">
+      <div class="text-block">
+        <h2 class="title">Revolutionize Your Packing with AI</h2>
+        <p class="description">
+          PackMate's AI ensures you pack smartly by analyzing your travel itinerary. It considers weather, destination,
+          and planned activities to create a personalized packing list.
+        </p>
+
+        <ul class="features-list">
+          <li>❄️ Weather-based packing suggestions</li>
+          <li>🗺️ Location-specific essentials</li>
+          <li>🎯 Activity-focused recommendations</li>
+        </ul>
+
+        <div class="stats-container">
+          <div class="stat-box">
+            <p class="number">{{ num1 }}%</p>
+            <p class="label">Accuracy</p>
+          </div>
+
+          <div class="stat-box">
+            <p class="number">{{ num2 }}+</p>
+            <p class="label">Users Assisted</p>
+          </div>
+
+          <button class="try-now-button" (click)="handleTryNow()">
+            Try Now
+          </button>
+        </div>
+
+
+
+      </div>
+      <div class="image-block">
+        <img src="assets/12.png" alt="AI Packing Assistant" class="responsive-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section -->
+  <section #detailsSection [ngClass]="{'animate': detailsVisible}" class="section details-section">
+    <div class="content-wrapper reverse">
+      <div class="image-block">
+        <img src="assets/13.png" alt="Travel Details Input" class="responsive-image">
+      </div>
+      <div class="text-block">
+        <h2 class="title">Effortlessly Input Your Travel Details</h2>
+        <p class="description">
+          Enter your destination, travel dates, and planned activities. Our AI analyzes the information to provide a
+          personalized packing checklist.
+        </p>
+        <ul class="features-list">
+          <li>Enter your travel destination and dates</li>
+          <li>Select your planned activities</li>
+          <li>Receive a customized packing list</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Debug Section -->
+  <section class="location-debug" style="text-align:center; margin-top:2rem;">
+    <h3>📍 Location Debug</h3>
+    <ng-container *ngIf="coords; else loading">
+      <p>Latitude: {{ coords?.latitude }}</p>
+      <p>Longitude: {{ coords?.longitude }}</p>
+      <p *ngIf="locationName">🗺️ You are at: {{ locationName }}</p>
+    </ng-container>
+    <ng-template #loading>
+      <p style="color:red">{{ error || 'Fetching location...' }}</p>
+    </ng-template>
+  </section>
+
+</div>

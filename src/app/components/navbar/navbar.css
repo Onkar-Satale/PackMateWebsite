@@ -1,0 +1,87 @@
+/* Body & font */
+body {
+  background-color: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px; /* Equal spacing on left and right */
+  margin: 20px auto;  /* Auto center vertically */
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: calc(100% - 40px); /* Take almost full screen */
+  max-width: 1400px; /* Stretch more horizontally */
+  box-sizing: border-box;
+}
+
+/* Left section: logo */
+.navbar-left .website-name {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-left .website-name:hover {
+  color: blue;
+  transform: scale(1.05);
+}
+
+/* Center section: nav links */
+.navbar-center {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-center .nav-link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333; /* Default color */
+  text-decoration: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-center .nav-link.hovered {
+  color: blue !important; /* Force blue on hover */
+  transform: scale(1.05);
+}
+
+/* Right section: login button */
+.navbar-right .login-btn {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 7px 20px; /* Smaller padding */
+  border-radius: 11px;
+  font-size: 16px;
+  height: auto; /* ensure button height fits text */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-right .login-btn.hovered {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  transform: scale(1.05);
+}
+
+/* Ensure navbar sections don’t overflow */
+.navbar-left, .navbar-center, .navbar-right {
+  box-sizing: border-box;
+}

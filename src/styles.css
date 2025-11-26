@@ -1,0 +1,14 @@
+/* Prevent horizontal scrolling and force vertical scroll only */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* ⚡ key: disables horizontal scroll */
+  overflow-y: auto;   /* vertical scroll remains */
+  box-sizing: border-box;
+}
+
+/* Apply border-box to all elements to avoid overflow from padding/margin */
+*, *::before, *::after {
+  box-sizing: inherit;
+}

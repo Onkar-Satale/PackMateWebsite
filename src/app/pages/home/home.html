@@ -1,0 +1,250 @@
+<!-- Hero Section -->
+<section class="hero py-5 bg-gradient" #heroSection>
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Text Column -->
+      <div class="col-md-6 mb-4 mb-md-0 heroHidden"
+           [ngClass]="{ 'fade-in': heroVisible }">
+        <h1 class="display-4 fw-bold">
+          Experience <span class="text-primary">Smarter</span> Travel Packing
+        </h1>
+
+        <p class="lead mt-3">
+          Your AI-powered companion helps you pack efficiently based on your
+          destination, weather, and activities—ensuring you never miss an important item.
+        </p>
+
+        <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+          <a [routerLink]="['/features']" class="btn btn-primary btn-lg">
+            Explore Features
+          </a>
+
+          <a [routerLink]="['/how-it-works']" class="btn-learn-more">
+            Learn More
+          </a>
+        </div>
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-md-6 text-center">
+        <img 
+          src="assets/img1.png"
+          alt="AI Packing Assistant Illustration"
+          class="img-fluid rounded shadow-lg"
+          style="max-height: 450px; width: 100%; object-fit: cover;">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- About Section -->
+<section class="py-5 bg-white text-center">
+  <div class="container">
+    <h2 class="display-5 fw-bold sectionHeading">Meet PackMate: Your Travel Companion</h2>
+    <p class="lead sectionParagraph">
+      At PackMate, our mission is to simplify travel planning and enhance your travel experience through innovative technology. We believe in innovation, user-centric design, and sustainability.
+    </p>
+    <img [src]="'assets/2.png'" alt="Travel Companion" class="img-fluid rounded sectionImage mt-3 shadow" style="max-height: 350px; object-fit: cover;">
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="display-5 fw-bold mb-4">Discover How Our AI Packing Assistant Works</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-card p-4 text-center">
+          <h4 class="text-primary">Input Details</h4>
+          <p>Enter your travel destination, dates, and planned activities.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-card p-4 text-center">
+          <h4 class="text-primary">Get Suggestions</h4>
+          <p>Receive a tailored packing list based on your inputs.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow hover-card p-4 text-center">
+          <h4 class="text-primary">Travel Stress-Free</h4>
+          <p>Pack with confidence and enjoy your journey without forgetting essentials.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5" #featureSection [ngClass]="{'animate': featuresVisible}">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-4">Explore PackMate's Innovative Features</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Feature Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm featureCard text-center border-0 hover-card">
+          <img src="assets/3.png" class="card-img-top rounded" alt="Personalized Packing Suggestions" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Personalized Packing Suggestions</h5>
+            <p class="card-text">Our AI analyzes your travel details to provide a customized packing list, ensuring you have everything you need for your trip.</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm featureCard text-center border-0 hover-card">
+          <img src="assets/4.png" class="card-img-top rounded" alt="Weather-Based Recommendations" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Weather-Based Recommendations</h5>
+            <p class="card-text">Stay prepared with real-time weather updates that adjust your packing list, ensuring you're ready for any climate.</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm featureCard text-center border-0 hover-card">
+          <img src="assets/5.png" class="card-img-top rounded" alt="Interactive Packing Experience" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Interactive Packing Experience</h5>
+            <p class="card-text">Enjoy a user-friendly interface with animations that make packing fun and efficient, adapting to your travel itinerary.</p>
+            <button class="btn btn-info btn-sm">Learn More</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Travel Scenarios Section -->
+<section class="py-5 bg-white" #scenarioSection [ngClass]="{'animate': scenariosVisible}">
+  <div class="container text-center">
+    <h2 class="display-5 fw-bold mb-4">Explore Travel Scenarios</h2>
+    <div class="row g-4 justify-content-center">
+
+      <!-- Scenario Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm scenarioCard text-center border-0 hover-card">
+          <img src="assets/6.png" alt="Tailored Packing Lists for Every Trip" 
+               style="width: 100%; height: 250px; object-fit: cover; border-radius: 20px;">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Tailored Packing Lists for Every Trip</h5>
+            <p class="card-text">Our AI Packing Assistant creates customized packing lists based on your travel details, ensuring you have everything you need for a perfect trip.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenario Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm scenarioCard text-center border-0 hover-card">
+          <img src="assets/7.png" alt="Real-Time Weather Adaptation" 
+               style="width: 100%; height: 250px; object-fit: cover; border-radius: 20px;">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Real-Time Weather Adaptation</h5>
+            <p class="card-text">Stay prepared for any weather with our AI’s real-time updates, adjusting your packing list to match current conditions at your destination.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scenario Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm scenarioCard text-center border-0 hover-card">
+          <img src="assets/8.png" alt="Interactive and User-Friendly Experience" 
+               style="width: 100%; height: 250px; object-fit: cover; border-radius: 20px;">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Interactive and User-Friendly Experience</h5>
+            <p class="card-text">Enjoy a seamless and engaging packing experience with our intuitive interface, designed to make travel preparation enjoyable and efficient.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Testimonials Section -->
+<section class="testimonials py-5 bg-light border-top border-bottom">
+  <div class="container text-center">
+    <h2 class="display-5 mb-3">What Users Say !?</h2>
+    <p class="lead mb-5">Discover how PackMate has transformed travel experiences for our users.</p>
+    <div class="row justify-content-center g-4">
+
+      <!-- Testimonial 1 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm testimonialCard border-0 text-center p-3 hover-card visible">
+          <img src="assets/ch1.png" class="rounded-circle mb-3 shadow-sm mx-auto d-block" style="width:120px; height:120px; object-fit:cover;" alt="Emily">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Emily</h5>
+            <p class="text-muted">Investor</p>
+            <p class="fst-italic">"PackMate has completely changed the way I prepare for trips! I never forget essentials anymore, and the suggestions are spot on for my travel plans."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm testimonialCard border-0 text-center p-3 hover-card visible">
+          <img src="assets/ch2.png" class="rounded-circle mb-3 shadow-sm mx-auto d-block" style="width:120px; height:120px; object-fit:cover;" alt="Ace">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Ace</h5>
+            <p class="text-muted">Banker</p>
+            <p class="fst-italic">"Using PackMate made my last vacation stress-free! The AI recommendations were tailored perfectly to my itinerary and the weather."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100 shadow-sm testimonialCard border-0 text-center p-3 hover-card visible">
+          <img src="assets/ch3.png" class="rounded-circle mb-3 shadow-sm mx-auto d-block" style="width:120px; height:120px; object-fit:cover;" alt="Ely">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Ely</h5>
+            <p class="text-muted">Traveler</p>
+            <p class="fst-italic">"PackMate is a game changer! I love how it adapts to my travel style and makes packing so much easier."</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-dark text-light py-5">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-md-6 mb-3 mb-md-0">
+        <h5>Stay Updated</h5>
+        <p>Subscribe to our newsletter for the latest travel tips and updates from PackMate.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <form class="d-flex justify-content-center justify-content-md-end">
+          <input type="email" class="form-control me-2" placeholder="Enter your email" style="max-width: 300px;">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="text-center mt-3 text-muted">© Created with  HackElite</div>
+  </div>
+</footer>
